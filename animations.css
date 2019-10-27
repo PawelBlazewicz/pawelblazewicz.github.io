@@ -1,0 +1,27 @@
+@keyframes fromRight {
+    0% {left: 500px;}
+    100%{ left: 0px}
+}
+
+@keyframes fromLeft {
+    0% {right: 500px;}
+    100%{ right: 0px}
+}
+
+p#box2 {
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+    animation-name: fromRight;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+p#box1 {
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+    animation-name: fromLeft;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}

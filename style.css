@@ -11,7 +11,7 @@ body {
 .main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, minmax(600px, 100vh) );
+    grid-template-rows: repeat(4,  100vh) ;
 }
 
 
@@ -21,6 +21,7 @@ body {
 }
 
 p.title  {
+    background: #0000008a;
     letter-spacing: 2px;
     font-size: 5em;
     font-weight: bold;
@@ -44,6 +45,7 @@ p.title  {
 
 p#box1 {
     border-radius: 30px 30px 60px;
+    position: relative;
 }
 
 p#box2 {
