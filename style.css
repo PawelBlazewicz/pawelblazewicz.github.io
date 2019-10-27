@@ -1,5 +1,42 @@
+/*reset*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(600px, 100vh) );
+}
+
+.screen {
+    position: sticky;
+    top: 0px;
+    background-color: gold;
+    height: minmax(600px, 100vh);
+}
+
+#first {
+    grid-row: 1;
+    background-image: url(./img/photo-1477346611705-65d1883cee1e.jpg);
+    
+}
+
+#second {
+    
+    grid-row: 2;
+    background-color: salmon;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+#third {
+    z-index: 4;
+}
+
+#fourth {
+    z-index: 6;
+    background-color: sienna;
 }
