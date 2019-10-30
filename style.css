@@ -4,6 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --3fex-hight: 500px;
+    --3fex-width: 300px;
+}
+
 body {
     font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -11,9 +17,8 @@ body {
 .main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4,  100vh) ;
+    grid-template-rows: 100vh minmax(min-content, 200px) 100vh 50vh ;
 }
-
 
 .screen {
     position: sticky;
@@ -21,26 +26,50 @@ body {
 }
 
 p.title  {
-    background: #0000008a;
+    background: rgba(255, 255, 255, .1);
     letter-spacing: 2px;
     font-size: 5em;
     font-weight: bold;
-    color: rgba(255, 255, 255, .6);
-    border: solid 5px;    
+    color: rgb(224, 171, 155);   
+    /* rgba(255, 255, 255, .6); */
+    text-shadow: 1px 2px #040404;
+    border: solid 2px;    
     padding: 25px;    
     text-align: center;
     width: 500px; 
     height: 280px;   
-    margin: calc( (100vh - 560px) /4) calc( (100vw - 500px) /5);
+    margin: calc( (100vh - 560px) /8) calc( (100vw - 500px) /8);
+}
+p#box1 {
+    width: 80vw;
 }
 
 @media handheld,  (max-width: 600px), (max-height: 600px) {
-    p.title  {
-        margin: 3vh 2vw;
-        width: 85vw;
-        height: 44vh;
-        font-size: 13vmin;
-        }   
+    
+        p#box1, p#box2 {
+            width: 85vw;
+            height: 44vh;
+            margin: 3vh 2vw;
+            font-size: 13vmin;
+        }  
+}
+
+@media (min-width: 1100px) and (min-height: 750px) {
+    p#box1, p#box2 {       
+        padding: 20px;
+        } 
+    p#box1 {
+        width: 70vw;
+        height: 380px;
+        margin: 3vh 23vw 3vh 7vw;
+        font-size: 8em;
+        }  
+    p#box2 {
+        width: 600px;
+        height: 300px;
+        margin: 0 4vw;
+        font-size: 6em;
+    }
 }
 
 p#box1 {
@@ -59,19 +88,45 @@ div#first  {
     /* #TODO dodac mniejszy obrazek  */
 }
 
-#second {
+
+
+div#second {
     z-index: 2;
     background-color: salmon;
-    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    padding: 50px 0px;    
+    top: 0;
 }
 
-#third {
+@media (max-width: 976px) {
+    div#second {
+        top: calc(100vh - ( 2* var(--3fex-hight) + 140px));
+    }
+
+}
+@media (max-width: 656px) {
+    div#second {
+        top: calc(100vh - ( 3* var(--3fex-hight) + 160px));
+    }
+
+}
+
+.threeColums {
+    margin:10px;
+    width: var(--3fex-width);
+    height: var(--3fex-hight);
+    background: darkcyan;
+}
+
+
+div#third {
     z-index: 4;
     background-color: cornflowerblue;
-
 }
 
-#fourth {
+div#fourth {
     z-index: 6;
     background-color: sienna;
 }
