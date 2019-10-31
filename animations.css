@@ -1,6 +1,6 @@
-@keyframes fromRight {
-    0% {left: 800px;}
-    100%{ left: 0px}
+@keyframes opacity {
+    0% {opacity: 0;}
+    100%{ opacity: 1;}
 }
 
 @keyframes fromLeft {
@@ -8,20 +8,49 @@
     100%{ right: 0px}
 }
 
-p#box2 {
+ p#box1, p#box2{
     transition-property: all;
-    transition-duration: 3s;
+    transition-duration: 2s;
     transition-timing-function: ease-in;
-    animation-name: fromRight;
-    animation-duration: 3s;
+    animation-name: opacity;
+    animation-duration: 4s;
     animation-fill-mode: forwards;
 }
 
-p#box1 {
-    transition-property: all;
-    transition-duration: 3s;
-    transition-timing-function: ease-in;
-    animation-name: fromLeft;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+p#box2{
+    animation-fill-mode: both ;
+    animation-delay: 1s;
 }
+
+.box {
+    transition-property: all;
+    transition-duration: 2s;
+    
+    transition-timing-function: ease-in;
+}
+#anim1:hover {
+    opacity: 0.5;
+    border-radius: 50%;
+    transform: rotate(360deg);
+}
+
+#anim2:hover {
+    transform: skewY(20deg) scale(0.7) ;
+}
+
+#anim3:hover {
+    transform: rotateY(360deg) scalex(1.4) ;  
+    z-index: 20; 
+}
+
+#anim4:hover {
+    opacity: 0;
+}
+#anim5:hover {
+    transform: scale(.1) ;
+    opacity: 0.1;
+}
+
+
+
+
