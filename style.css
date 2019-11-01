@@ -44,7 +44,7 @@ hr {
 }
 
 p#box1, p#box2, .con {
-    border-color:rgb(34, 120, 188);;
+    border-color:rgb(34, 120, 188);
 }
 
 p#box1 {
@@ -61,6 +61,7 @@ p.title  {
     justify-content: center;
     align-items: center;
     display: flex;
+    box-shadow: 0px 0px 15px 5px rgb(0, 0, 0);
     background: rgba(0, 0, 0, .2);
     letter-spacing: 2px;
     font-size: 5em;
@@ -118,6 +119,10 @@ div#second {
     align-items: center;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 0px 15px 5px rgb(0, 0, 0);
+}
+
+
 }
 
 .threeColums span:first-of-type {
@@ -137,7 +142,7 @@ div#second {
 div#third {
     z-index: 4;
     background-color: rgb(26, 80, 110);
-    background-image: linear-gradient(45deg, #29526d, transparent);
+    background-image: linear-gradient(15deg, #832b0dcc, transparent);
     display: flex;    
     justify-content: center;
 }
