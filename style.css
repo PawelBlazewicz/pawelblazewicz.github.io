@@ -22,12 +22,7 @@ hr {
 .main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh minmax(min-content, 200px) minmax(min-content, 100vh) 70vh ;
-}
-
-.screen {
-    position: sticky;
-    top: 0px;    
+    grid-template-rows: 100vh min-content min-content min-content ;
 }
 
 .con {
@@ -68,7 +63,6 @@ p.title  {
     font-weight: bold;
     color: rgb(255, 255, 255);     
     text-shadow: 1px 2px #040404;
-    /* border: solid 2px;     */
     padding: 25px;    
     text-align: center;
     width: 570px; 
@@ -89,6 +83,8 @@ p.title  {
 }
 
 div#first  {
+    position: sticky;
+    top: 0px;   
     background-image: url(./img/photo-1555099962-4199c345e5dd.jpg);  
     background-position: center;
     /* #TODO dodac mniejszy obrazek  */
@@ -97,11 +93,10 @@ div#first  {
 
 div#second {
     z-index: 2;
-    background-image: linear-gradient(5deg, #174F6E, #9b6565);
     display: flex;
     justify-content: center;
     flex-wrap:wrap;
-    padding: 200px 0px;    
+    padding: 50px 0px;    
     top: 0;
 }
 
@@ -122,9 +117,6 @@ div#second {
     box-shadow: 0px 0px 15px 5px rgb(0, 0, 0);
 }
 
-
-}
-
 .threeColums span:first-of-type {
         font-size: 40px;
         line-height: 2em;
@@ -141,14 +133,11 @@ div#second {
 
 div#third {
     z-index: 4;
-    background-color: rgb(26, 80, 110);
-    background-image: linear-gradient(15deg, #832b0dcc, transparent);
     display: flex;    
     justify-content: center;
 }
 
 .container{
-    /* box-shadow: 0px 1px 300px 150px rgba(0,0,0,1); */
     max-width: 960px;
     padding: 40px 0;
     height: auto;
@@ -196,7 +185,9 @@ div#fourth {
     align-items: center;
     justify-content: center;
     background-color: rgba(47, 72, 91, 0.8);
-   
+    background-image: url(./img/photo-1555099962-4199c345e5dd.jpg);
+    background-position: center;
+    background-size: cover;   
 }
 
 .contact-input {
@@ -218,29 +209,9 @@ div#fourth {
     padding: 40px;
 }
 
-/* calc( var(--3fex-hight) + 420 px ) */
-@media (max-height: calc( 550px + 420px) ) {
-    div#second {  
-        top: calc(100vh - (  var(--3fex-hight) + 420px ));
-    }
-}
+#merged {
+    z-index: 30;
+    background-image: linear-gradient(5deg, #174F6E, #9b6565);
 
-@media (max-width: 976px) {
-    div#second {
-        padding: 70px 0px;  
-        top: calc(100vh - ( 2* var(--3fex-hight) + 180px));
-    }
-    div#third {
-        top: calc( 100vh - (3 * 320px) - 80px );
-    }
-
-}
-@media (max-width: 656px) {
-    div#second {
-        padding: 50px 0px;  
-        top: calc(100vh - ( 3* var(--3fex-hight) + 160px));
-    }
-    div#third {
-        top: calc( 100vh - (6 * 320px) - 80px );
-    }
+    background-color: blueviolet;
 }
