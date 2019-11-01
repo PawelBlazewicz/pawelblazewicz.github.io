@@ -191,7 +191,31 @@ div#third {
 
 div#fourth {
     z-index: 6;
-    background-color: sienna;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(47, 72, 91, 0.8);
+   
+}
+
+.contact-input {
+    width: 300px;
+    margin: 5px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#message {
+    height: 150px;
+}
+
+.contact-text {
+    font-size: 37px;
+    font-weight: bold;
+    color: white;
+    padding: 40px;
 }
 
 /* calc( var(--3fex-hight) + 420 px ) */
@@ -199,9 +223,6 @@ div#fourth {
     div#second {  
         top: calc(100vh - (  var(--3fex-hight) + 420px ));
     }
-    /* div#third {
-        top: calc( 100vh - (2 * 320px) - 80px );
-    } */
 }
 
 @media (max-width: 976px) {
