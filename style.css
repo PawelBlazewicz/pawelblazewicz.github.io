@@ -105,7 +105,7 @@ div#second {
     width: 300px;
     height: 550px;
     background: rgba(255, 255, 255, .1);
-    box-shadow: 0px 0px 15px 5px rgb(0, 0, 0);
+    box-shadow: 0px 0px 15px 5px #000;
 }
 
 .IEall, .threeColums {
@@ -193,6 +193,7 @@ div#fourth {
     font-weight: bold;
     color: white;
     padding: 40px;
+    text-align: center;
     text-shadow: 1px 2px #040404;
 }
 
