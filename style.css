@@ -16,7 +16,7 @@ body {
 
 .main {
     display: grid;
-    grid-template: 100vh min-content min-content min-content / 1fr;
+    grid-template: 100vh min-content min-content / 1fr;
 }
 
 .con {
@@ -106,6 +106,10 @@ div#second {
     height: 550px;
     background: rgba(255, 255, 255, .1);
     box-shadow: 0px 0px 15px 5px rgb(0, 0, 0);
+}
+
+.IEall, .threeColums {
+    align-items: stretch;
 }
 
 .threeColums span:first-of-type {
