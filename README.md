@@ -1,5 +1,6 @@
 # Portfolio
 Autor: Paweł Błażewicz
+
 Założenia w projekcie zmieniały się kilkukrotnie w przeciągu ostatniego tygodnie.
 Trzy podstawowe sekcje zostały ostylowane z wykorzystaniem siatki grid, ale podstawową technologią, którą wykorzystałem do zapewnienia responsywnośći strony jest Flexbox. Poniżej prezentuje widok 1 ekranu, zawierającego 2 paragrafy z animacją odpalaną po wczytaniu strony. Paragrafy dopasowują swój rozmiar oraz położenie adaptując się do zmiany rozdzielczości okna przeglądarki.
 ![Bez tytułu](https://user-images.githubusercontent.com/52447280/68073271-8b8d7e00-fd8e-11e9-9f0d-de8f0c67e86a.png)
